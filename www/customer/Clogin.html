@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Login Form</title>
+        <style>.login-form{
+            width: 300px;
+            margin: 0 auto;
+            font-family: Tahoma, Geneva, sans-serif;
+          }
+          .login-form h1{
+          text-align: center;
+          background-color:rgb(184, 170, 170);
+            text-align: center;
+            color: #7c4141;
+            font-size: 24px;
+            padding: 20px 0 20px 0;
+            width: 300px;
+          }
+         
+          input[type="text"] {
+            height: 30px;
+            width: 290px;
+           
+            }
+            input[type="password"] {
+            height: 30px;
+            width: 290px;
+         }
+          .login-form input[type="submit"]{
+            width: 100%;
+            padding: 15px;
+            background-color: #a0a9b3;
+            border: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: bold;
+            color: #ffffff;
+          }</style>
+    </head>
+    <body>
+        <div class="login-form">
+            <h1>Login</h1>
+            <form action="auth" method="POST">
+                <div>
+                <input type="text" name="username" placeholder="Username" class="usernames" align= "center"required>
+                <p></p>
+                <input type="password" name="password" placeholder="Password" required>
+                <p></p>
+                <input type="submit">
+                </div> 
+            </form>
+            <h1>Register</h1>
+            <form action="/register" method="POST">
+                <div>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <p></p>
+                    <input type="text" name="phone" placeholder="Phone Number" required>
+                    <p></p>
+                    <input type="text" name="email" placeholder="Email Address" required>
+                    <p></p>
+                    <input type="text" name="usnme" placeholder="Username" required>
+                    <p></p>
+                    <input type="password" name="pwd" placeholder="Password" required>
+                    <p></p>
+                    <input type="submit">
+                </div>
+            </form>           
+            </div>
+        </div>
+    </body>
+</html>
