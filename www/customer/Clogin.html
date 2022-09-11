@@ -8,14 +8,18 @@
 <body>
 
     <div class="login-form">
+
         <h1>Login</h1>
-        <form action="auth" method="POST">
+
+        <form action="../js/clogin.js" method="POST" id="c_login">
             <div>
-                <input type="text" name="username" placeholder="Username" class="usernames" align="center" required>
-                <p></p>
+                <input type="text" name="c_username" placeholder="Username" required>
+                <br><br>
+
                 <input type="password" name="password" placeholder="Password" required>
-                <p></p>
-                <input type="submit">
+                <br><br>
+                
+                <button type="submit">Login</button>
             </div>
         </form>
 
@@ -25,19 +29,25 @@
 
         <h1>Register</h1>
 
-        <form action="/register" method="POST">
+        <form action="../js/register.js" method="POST" id="c_register">
             <div>
                 <input type="text" name="name" placeholder="Name" required>
-                <p></p>
+                <br><br>
+
                 <input type="text" name="phone" placeholder="Phone Number" required>
-                <p></p>
+                <br><br>
+
                 <input type="text" name="email" placeholder="Email Address" required>
-                <p></p>
+                <br><br>
+
                 <input type="text" name="usnme" placeholder="Username" required>
-                <p></p>
+                <br><br>
+
                 <input type="password" name="pwd" placeholder="Password" required>
-                <p></p>
-                <input type="submit">
+                <br><br>
+
+                <button type="submit">Register</button>
+
             </div>
 
         </form>

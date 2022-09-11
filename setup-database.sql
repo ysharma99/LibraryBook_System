@@ -11,8 +11,8 @@ INSERT INTO book VALUES ('002', 'The Hunger Games', 'Suzanne Collins');
 
 CREATE TABLE administrator (
   adminID varchar(10),
-  username varchar(50) NOT NULL,
-  userPWD varchar(50) NOT NULL,
+  a_username varchar(50) NOT NULL,
+  a_userPWD varchar(50) NOT NULL,
   PRIMARY KEY (adminID)
 );
 
@@ -21,8 +21,8 @@ INSERT INTO administrator VALUES ('001', 'admin321', 'Adm1nOne!');
 
 CREATE TABLE customer (
   customerID varchar(10),
-  username varchar(50) NOT NULL,
-  userPWD varchar(50) NOT NULL,
+  c_username varchar(50) NOT NULL,
+  c_userPWD varchar(50) NOT NULL,
   fName varchar(50) NOT NULL,
   lname varchar(50) NOT NULL,
   stAdress varchar(50) NOT NULL,
