@@ -1,13 +1,22 @@
-var LoginOrRegister= (function () {
+var LoginOrRegister = (function () {
     "use strict"
+    let pub = {};
 
-    PublicKeyCredential.setup = function () {
-        let btn_a_login = document.getElementById("a_login");
-        let btn_c_login = document.getElementById("c_login");
-        let btn_c_register = document.getElementById("c_register");
+    pub.setup = function () {
+        let form_a_login = document.getElementById("a_login");
+        let form_c_login = document.getElementById("c_login");
+        let form_c_register = document.getElementById("c_register");
 
         
+
+        form_c_register.addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Account Registered (NOT! GOTCHAAA!)");
+        });
+
     };
+
+    return pub;
 
 }());
 
@@ -18,7 +27,7 @@ if (document.getElementById) {
         window.attachEvent('onload', LoginOrRegister.setup);
     } else {
         /* jshint -W117 */
-        alert("Could not attach 'MakeCard.setup' to the 'window.onload' event");
+        alert("Could not attach 'LoginOrRegister.setup' to the 'window.onload' event");
         /* jshint +W117 */
     }
 }

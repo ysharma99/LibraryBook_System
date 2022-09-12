@@ -16,8 +16,8 @@ CREATE TABLE administrator (
   PRIMARY KEY (adminID)
 );
 
-INSERT INTO administrator VALUES ('000', 'admin123', 'Password123');
-INSERT INTO administrator VALUES ('001', 'admin321', 'Adm1nOne!');
+INSERT INTO administrator VALUES ('000', 'admin123', 'Gue55Aga1n!');
+INSERT INTO administrator VALUES ('001', 'admin321', 'N0tAdm1n!');
 
 CREATE TABLE customer (
   customerID varchar(10),
