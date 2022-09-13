@@ -14,10 +14,12 @@ vagrant up --provider virtualbox
 
 •To access the customer website, enter the following into a command prompt:
 vagrant ssh cwebserver
-• Then navigate in a web browser to:
-http://192.168.2.11:8082
+
+•Then navigate in a web browser to:
+http://127.0.0.1:8082
 
 •To access the admin website, enter the following into a command prompt:
 vagrant ssh awebserver
+
 •Then, navigate to the following address in a web browser:
-http://192.168.2.12:8083/
+http://127.0.0.1:8080/
