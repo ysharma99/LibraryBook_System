@@ -2,26 +2,26 @@
 <html lang="en">
 
 <header>
-    <meta charset="UTF-8">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <title>Home</title>
 
-    <style>
-        th {
-          text-align: left;
-        }
-    
-        table,
-        th,
-        td {
-          border: 2px solid grey;
-          border-collapse: collapse;
-        }
-    
-        th,
-        td {
-          padding: 0.2em;
-        }
-      </style>
+  <style>
+    th {
+      text-align: left;
+    }
+
+    table,
+    th,
+    td {
+      border: 2px solid grey;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 0.2em;
+    }
+  </style>
 </header>
 
 <body>
@@ -51,11 +51,17 @@
     $q = $pdo->query("SELECT * FROM book");
 
     while ($row = $q->fetch()) {
-      echo "<tr><td>" . $row["bookID"] . "</td><td>" . $row["title"] . "</td></tr>" . "</td><td>" . $row["author"] . "</td></tr>\n";
+      echo "<tr><td>" . $row["bookID"] . "</td><td>" . $row["title"] . "</td><td>" . $row["author"] . "</td></tr>\n";
     }
 
     ?>
   </table>
+
+  <p>
+    Shortcut to go to customer index page <a href="../customer/cIndex.php">here</a>.
+  </p>
+
+  <h3>Click <a href="./aLogin.html">here</a> to logout</h3>
 
 </body>
 

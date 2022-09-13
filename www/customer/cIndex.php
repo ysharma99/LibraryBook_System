@@ -51,11 +51,17 @@
     $q = $pdo->query("SELECT * FROM book");
 
     while ($row = $q->fetch()) {
-      echo "<tr><td>" . $row["bookID"] . "</td><td>" . $row["title"] . "</td></tr>" . "</td><td>" . $row["author"] . "</td></tr>\n";
+      echo "<tr><td>" . $row["bookID"] . "</td><td>" . $row["title"] . "</td><td>" . $row["author"] . "</td></tr>\n";
     }
 
     ?>
   </table>
+
+  <p>
+    Shortcut to go to admin index page <a href="../admin/aIndex.php">here</a>.
+  </p>
+
+  <h3>Click <a href="./cLogin.html">here</a> to logout</h3>
 
 </body>
 
