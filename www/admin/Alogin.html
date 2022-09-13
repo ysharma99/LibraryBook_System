@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html lang="en">
 
 <header>
