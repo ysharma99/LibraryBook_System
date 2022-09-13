@@ -2,12 +2,13 @@ CREATE TABLE book (
   bookID varchar(10),
   title varchar(50) NOT NULL,
   author varchar(50) NOT NULL,
+  stock smallint NOT NULL,
   PRIMARY KEY (bookID)
 );
 
-INSERT INTO book VALUES ('000', 'To Kill A Mockingbird', 'Harper Lee');
-INSERT INTO book VALUES ('001', 'The Name of the Wind', 'Patrick Rothfuss');
-INSERT INTO book VALUES ('002', 'The Hunger Games', 'Suzanne Collins');
+INSERT INTO book VALUES ('000', 'To Kill A Mockingbird', 'Harper Lee', 1);
+INSERT INTO book VALUES ('001', 'The Name of the Wind', 'Patrick Rothfuss', 0);
+INSERT INTO book VALUES ('002', 'The Hunger Games', 'Suzanne Collins', 3);
 
 CREATE TABLE administrator (
   adminID varchar(10),

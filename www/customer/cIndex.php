@@ -35,6 +35,7 @@
       <th>bookID</th>
       <th>Title</th>
       <th>Author</th>
+      <th>stock</th>
     </tr>
 
     <?php
@@ -51,7 +52,7 @@
     $q = $pdo->query("SELECT * FROM book");
 
     while ($row = $q->fetch()) {
-      echo "<tr><td>" . $row["bookID"] . "</td><td>" . $row["title"] . "</td><td>" . $row["author"] . "</td></tr>\n";
+      echo "<tr><td>" . $row["bookID"] . "</td><td>" . $row["title"] . "</td><td>" . $row["author"] . "</td><td>" . $row["stock"] . "</td></tr>\n";
     }
 
     ?>
