@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <style>
+        th {
+          text-align: left;
+        }
+    
+        table,
+        th,
+        td {
+          border: 2px solid grey;
+          border-collapse: collapse;
+        }
+    
+        th,
+        td {
+          padding: 0.2em;
+        }
+      </style>
+</header>
+
+<body>
+
+  <h1>Database Display</h1>
+
+  <p>Shocwing contents of the book table:</p>
+
+  <table border="1">
+    <tr>
+      <th>bookID</th>
+      <th>Title</th>
+      <th>Author</th>
+    </tr>
+
+    <?php
+
+    $db_host   = '192.168.2.13';
+    $db_name   = 'bookstorage';
+    $db_user   = 'admin';
+    $db_passwd = 'P@ssw0rD';
+
+    $pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
+
+    $pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
+
+    $q = $pdo->query("SELECT * FROM book");
+
+    while ($row = $q->fetch()) {
+      echo "<tr><td>" . $row["bookID"] . "</td><td>" . $row["title"] . "</td></tr>" . "</td><td>" . $row["author"] . "</td></tr>\n";
+    }
+
+    ?>
+  </table>
+
+</body>
+
+</html>

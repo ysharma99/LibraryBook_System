@@ -30,10 +30,12 @@ echo "CREATE DATABASE bookstorage;" | mysql
 
 # Then create a database user "admin" with the given password.
 echo "CREATE USER 'admin'@'%' IDENTIFIED BY 'P@ssw0rD';" | mysql
+echo "CREATE USER 'customer'@'%' IDENTIFIED BY 'Pa55w0rD';" | mysql
 
 # Grant all permissions to the database user "admin" regarding
 # the "bookstorage" database that we just created, above.
 echo "GRANT ALL PRIVILEGES ON bookstorage.* TO 'admin'@'%'" | mysql
+echo "GRANT SELECT ON bookstorage.* TO 'customer'@'%'" | mysql
 
 # Set the MYSQL_PWD shell variable that the mysql command will
 # try to use as the database password ...
@@ -44,6 +46,7 @@ export MYSQL_PWD='P@ssw0rD'
 # can look at the file on your host. The mysql command specifies both
 # the user to connect as (admin) and the database to use (bookstorage).
 cat /vagrant/setup-database.sql | mysql -u admin bookstorage
+cat /vagrant/setup-database.sql | mysql -u customer bookstorage
 
 # By default, MySQL only listens for local network requests,
 # i.e., that originate from within the dbserver VM. We need to

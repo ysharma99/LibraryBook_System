@@ -42,7 +42,7 @@ config.vm.box = "ubuntu/focal64"
     cwebserver.vm.hostname = "cwebserver"
 
     #Sets up port forwarding so that the host computer can connect to IP address 127.0.0.1 port 8082
-    # and that network request will reach our webserver VM's port 80.
+    # and that network request will reach our webserver VM's port 81.
     cwebserver.vm.network "forwarded_port", guest: 80, host: 8082, host_ip: "127.0.0.1"
 
     # Sets up a private network that our VMs will use to communicate and assigns an ip
