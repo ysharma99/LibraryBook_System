@@ -119,7 +119,12 @@ while($query_data = mysqli_fetch_row($result)) {
 </body>
 </html>
 
-
+CREATE TABLE BORROWEDBOOKS (
+        BORROWEDBOOKID int UNSIGNED AUTO_INCREMENT,
+        BOOKID int UNSIGNED NOT NULL,
+        PRIMARY KEY (BORROWEDBOOKID),
+        FOREIGN KEY(BOOKID) REFERENCES BOOKS(BOOKID)
+     );
 <?php
 
 /* Add a book to the table. */
@@ -163,7 +168,7 @@ function TableExists($tableName, $connection, $dbName) {
   $t = mysqli_real_escape_string($connection, $tableName);
   $d = mysqli_real_escape_string($connection, $dbName);
 
-  $checktable = mysqli_query($connection,
+  $checktable = mysqli_query($connection, 
       "SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME = '$t' AND TABLE_SCHEMA = '$d'");
 
   if(mysqli_num_rows($checktable) > 0) return true;
